@@ -6,3 +6,4 @@ pip install pyaudio
 #pip install os                #if error
 pip install gtts
 pip install request
+pip install pygame
