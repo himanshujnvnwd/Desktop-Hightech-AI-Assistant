@@ -63,9 +63,6 @@ def processCommand(c):
     elif "open facebook" in c.lower():
         webbrowser.open("https://facebook.com")
 
-    elif "open study stark" in c.lower():
-        webbrowser.open("https://study-stark.com")
-
     elif "open shorts" in c.lower():
         webbrowser.open("https://youtube.com/shorts")
 
@@ -195,21 +192,21 @@ def processCommand(c):
 if __name__ == "__main__":
     speak("Initializing Ultron....")
     while True:
-        # Listen for the wake word "Jarvis"
+        # Listen for the wake word "Ultron"
         # obtain audio from the microphone
         r = sr.Recognizer()
          
-        print("recognizing...")
+        print("Hello Himanshu...")
         try:
             with sr.Microphone() as source:
                 print("Listening...")
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
             word = r.recognize_google(audio)
-            if(word.lower() == "Ultron"):
-                speak("Ya")
+            if(word.lower() == "ultron"):
+                speak("Hello Himanshu! What is my my Task")
                 # Listen for command
                 with sr.Microphone() as source:
-                    print("Assistant Active...")
+                    print("Himanshu's assistant active...")
                     audio = r.listen(source)
                     command = r.recognize_google(audio)
 
